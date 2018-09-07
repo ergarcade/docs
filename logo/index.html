@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Erg Arcade logo</title>
+    <link href="fontawesome-free-5.1.0-web/css/all.css" rel="stylesheet">
+    <script src="jscolor.js"></script>
+    <script>
+    function setTextColor(elem) {
+        document.querySelectorAll('.logo-primary').forEach(function(el, i) {
+            el.style.color = '#' + elem.toString();
+        });
+        document.querySelectorAll('.inverted-primary').forEach(function(el, i) {
+            el.style.color = '#fff';
+            el.style.background = '#' + elem.toString();
+        });
+    }
+    function setTextColorSecondary(elem) {
+        document.querySelectorAll('.logo-secondary').forEach(function(el, i) {
+            el.style.color = '#' + elem.toString();
+        });
+        document.querySelectorAll('.inverted-secondary').forEach(function(el, i) {
+            el.style.color = '#fff';
+            el.style.background = '#' + elem.toString();
+        });
+    }
+
+    function changeZoom(z) {
+        document.querySelectorAll('td').forEach(function(el, i) {
+            el.style.fontSize = z + "%";
+        });
+    }
+    </script>
+
+    <style>
+    td {
+        font-size: 100%;
+    }
+    .logo {
+        padding: 0.2em;
+        border: 1px solid #000;
+    }
+    .logo-primary,
+    .logo-secondary {
+        color: #006BB3;
+        background: #fff;
+    }
+    .inverted-primary,
+    .inverted-secondary {
+        color: #fff;
+        background: #006BB3;
+    }
+    table {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+                Primary
+            </button>
+            <input id="chosen-value" value="006BB3">
+            |
+            <button class="jscolor {valueElement:'chosen-value-secondary', onFineChange:'setTextColorSecondary(this)'}">
+                Secondary
+            </button>
+            <input id="chosen-value-secondary" value="006BB3">
+            |
+            Zoom <input id="zoom" size="3" value="100" onChange="changeZoom(this.value)">%
+        </p>
+    </div>
+    <table>
+        <tr>
+            <th><strong>fa-xs</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-xs"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-xs"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-xs"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-xs"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-sm</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-sm"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-sm"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-sm"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-sm"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>Unit</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-lg</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-lg"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-lg"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-lg"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-lg"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-2x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-2x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-2x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-2x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-2x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-3x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-3x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-3x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-3x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-3x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-4x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-4x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-4x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-4x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-4x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-5x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-5x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-5x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-5x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-5x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-6x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-6x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-6x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-6x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-6x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-7x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-7x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-7x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-7x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-7x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-8x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-8x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-8x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-8x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-8x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-9x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-9x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-9x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-9x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-9x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><strong>fa-10x</strong></th>
+            <td>
+                <span class="logo logo-primary fa-stack fa-10x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-primary fa-stack fa-10x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo logo-secondary fa-stack fa-10x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+                <span class="logo inverted-secondary fa-stack fa-10x"><i class="fas fa-circle-notch fa-stack-2x"></i><i class="fas fa-gamepad fa-stack-1x"></i></span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
